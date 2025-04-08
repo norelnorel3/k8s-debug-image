@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: debug-webtop
+  name: k8s-debug-pod
   labels:
-    app: debug-webtop
+    app: k8s-debug
 spec:
   containers:
-  - name: debug-tools
-    image: norelnorel3/k8s-debug-tools:v3
+  - name: k8s-debug-container
+    image: norelnorel3/k8s-debug-tools:1.0.0
     securityContext:
       privileged: false  
     env:
@@ -18,11 +18,11 @@ spec:
     - name: TZ
       value: "UTC"
     - name: TITLE
-      value: "K8s Debug Webtop"
+      value: "K8s Debug Pod"
     - name: NGINX_DISABLE_IPV6
       value: "true"
     - name: CUSTOM_USER
-      value: "abc"
+      value: "user"
     - name: CUSTOM_PORT
       value: "3000"
     - name: SUBFOLDER
