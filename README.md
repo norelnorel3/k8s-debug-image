@@ -22,7 +22,7 @@ A comprehensive debugging environment for Kubernetes clusters that combines GUI 
 Deploy the debug pod using the provided YAML:
 
 ```bash
-kubectl apply -f debug-pod.yaml
+kubectl apply -f k8s-debug-pod.yaml
 ```
 
 Access the web interface through the exposed ports (3000/3001).
